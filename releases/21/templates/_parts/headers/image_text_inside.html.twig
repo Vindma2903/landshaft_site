@@ -1,0 +1,15 @@
+<div class="relative overflow-hidden">
+    <img src="{{ img }}"
+         alt=""
+         class="absolute inset-0 w-full h-full object-cover -z-10">
+
+    {# Опциональный цветной оверлей поверх изображения #}
+    {% if overlay_color is defined and overlay_color %}
+        <div class="absolute inset-0 -z-5" style="background-color: {{ overlay_color }};"></div>
+    {% endif %}
+    {% block body_wrap %}
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+    {% endblock %}
+</div>

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block main_before %}
+    {% embed "_parts/headers/image_text_outside.html.twig" with {
+        img: "/img/header_about.webp"
+    } %}
+        {% block body %}
+            <h1 class="text-4xl lg:text-7xl mb-5 uppercase font-helvetica">
+                <span class="font-medium">Ландшафтный дизайн</span>
+                <br>
+                <span class="my-text-outline lg:text-right lg:block">от мастерской вереск</span>
+            </h1>
+            <div class="text-lg max-w-[400px] lg:ml-[35%] xl:ml-[50%]">
+                “Вереск” - мастерская ландшафтов по проектированию и обустройству дачных участков
+            </div>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
+
+{% block content %}
+    {% include '_parts/title_with_text.html.twig' with {title: "Команда", description: "К нам обращаются владельцы загородных участков, чтобы создать проект будущего сада, красиво обустроить и озеленить дачный участок, обеспечить уход за садом."} %}
+    <div class="h-28"></div>
+    {% include 'page/_about_parts/employee.html.twig' with {name: "Максим<br/>Никитин", about: "Генеральный директор<br/>Соучередитель", img: "https://placehold.co/470x330", isRight: true} %}
+    <div class="h-28"></div>
+    {% include 'page/_about_parts/employee.html.twig' with {name: "Максим<br/>Никитин", about: "Генеральный директор<br/>Соучередитель", img: "https://placehold.co/470x330"} %}
+    <div class="h-28"></div>
+    {% include '_parts/title_with_text.html.twig' with {title: "Наша миссия", description: "Когда к нам приходит человек с желанием создать красивый сад, мы обсуждаем проект до тех пор, пока не поймем значение слова «красивый» лично для него."} %}
+    <div class="h-28"></div>
+    {% include 'page/_about_parts/quote.html.twig' %}
+    <div class="h-28"></div>
+    {% include '_parts/three_images.html.twig' with {img1: "https://placehold.co/600x820", img2: "https://placehold.co/600x390", img3: "https://placehold.co/600x390"} %}
+    <div class="h-28"></div>
+    {% include '_parts/title_with_text.html.twig' with {
+        title: "Наши партнеры",
+        description: "Чтобы строительный материал обходился дешевле, мы налаживаем партнерские отношения с поставщиками строительных и посадочных материалов. Поэтому заказчик тратит меньше.",
+        after_description: include('page/_about_parts/partners_logos.html.twig'),
+    } %}
+{% endblock %}

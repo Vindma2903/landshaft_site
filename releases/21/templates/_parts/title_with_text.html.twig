@@ -1,0 +1,9 @@
+<div class="sm:flex sm:justify-between max-w-[1080px] mx-auto">
+    <h3 class="opacity-40 uppercase mb-10 sm:mb-0 mr-10">{{ title }}</h3>
+    <div class="sm:max-w-[550px]">
+        <div class="text-xl sm:text-2xl">{{ description }}</div>
+        {% if after_description is defined %}
+            {{ after_description|raw }}
+        {% endif %}
+    </div>
+</div>

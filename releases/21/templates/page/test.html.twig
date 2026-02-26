@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% set items = [
+    {from: "", to: "/planting"},
+    {from: "", to: "/earthwork"},
+    {from: "/homepage", to: "/homepage"},
+    {from: "/portfolio", to: "/portfolio"},
+    {from: "/ceny", to: "/prices"},
+    {from: "/kontakty", to: "/contacts"},
+    {from: "/uslugi", to: "/services"},
+    {from: "/o-kompanii", to: "/about"},
+    {from: "/agat", to: ""},
+    {from: "/analiz-pochvy", to: ""},
+    {from: "/belveder", to: ""},
+    {from: "/blagoustrojstvo-dachnogo-uchastka", to: ""},
+    {from: "/dachnoe", to: ""},
+    {from: "/derevyannye-dorozhki-na-dache", to: ""},
+    {from: "/drenazh-uchastka", to: ""},
+    {from: "/ekoparkovka-pod-klyuch", to: ""},
+    {from: "/korchevanie-pnej", to: ""},
+    {from: "/landshaftnoe-proektirovanie", to: ""},
+    {from: "/landshaftnye-predproektnye-raboty", to: ""},
+    {from: "/landshaftnyj-dizajn-uchastka", to: ""},
+    {from: "/livnevaya-kanalizaciya", to: ""},
+    {from: "/maloe-verevo", to: ""},
+    {from: "/metallicheskie-podpornye-stenki", to: ""},
+    {from: "/moshhenie-bruschatkoj", to: ""},
+    {from: "/moshhenie-dorozhek", to: ""},
+    {from: "/moshhenie-klinkerom", to: ""},
+    {from: "/moshhenie-prirodnym-kamnem", to: ""},
+    {from: "/moshhenie-trotuarnoj-plitkoj", to: ""},
+    {from: "/nabivnye-dorozhki", to: ""},
+    {from: "/nashi-eskizy-i-vizualizacii", to: ""},
+    {from: "/oblicovka-podpornykh-stenok", to: ""},
+    {from: "/obrezka-derevev", to: ""},
+    {from: "/obrezka-kustov", to: ""},
+    {from: "/ochistka-prudov", to: ""},
+    {from: "/otmostka-vokrug-doma", to: ""},
+    {from: "/ozelenenie-uchastka", to: ""},
+    {from: "/parkovka-na-dache-pod-klyuch", to: ""},
+    {from: "/podpornye-stenki", to: ""},
+    {from: "/podpornye-stenki-iz-betona", to: ""},
+    {from: "/podpornye-stenki-iz-dereva", to: ""},
+    {from: "/podpornye-stenki-iz-gabionov", to: ""},
+    {from: "/podpornye-stenki-iz-kamnya", to: ""},
+    {from: "/pokos-travy", to: ""},
+    {from: "/posadka-derevev", to: ""},
+    {from: "/posadka-kustarnikov", to: ""},
+    {from: "/posadka-rastenij", to: ""},
+    {from: "/posevnoj-gazon-pod-klyuch", to: ""},
+    {from: "/prochistka-livnevoj-kanalizacii", to: ""},
+    {from: "/raschistka-uchastka", to: ""},
+    {from: "/rulonnyj-gazon-pod-klyuch", to: ""},
+    {from: "/severnaya-zhemchuzhina", to: ""},
+    {from: "/sostav-landshaftnogo-proekta", to: ""},
+    {from: "/strizhka-zhivoj-izgorodi", to: ""},
+    {from: "/sukhodole", to: ""},
+    {from: "/topograficheskaya-semka", to: ""},
+    {from: "/uborka-territorii-ot-listvy", to: ""},
+    {from: "/ukhod-za-sadom", to: ""},
+    {from: "/ukhod-za-sadom-osenyu", to: ""},
+    {from: "/ukhod-za-sadom-vesnoj", to: ""},
+    {from: "/uslugi-strizhki-gazona", to: ""},
+    {from: "/uslugi-ukhoda-za-gazonom", to: ""},
+    {from: "/ustrojstvo-gazona", to: ""},
+    {from: "/vakansii", to: ""},
+    {from: "/valka-derevev", to: ""},
+    {from: "/vyrubka-kustarnika", to: ""},
+    {from: "/zhivye-izgorodi", to: ""},
+] %}
+
+{% block content %}
+    <h1 class="text-5xl sm:text-7xl mb-24 uppercase text-center">Перенос</h1>
+
+    <div class="flex flex-col gap-2.5">
+        {% for item in items %}
+            <div class="flex items-center justify-center">
+
+                <div class="basis-[48%] text-right">
+                    {% if item.from is not empty %}
+                        <a class="underline hover:bg-white hover:text-black" href="https://veresk-landshaft.ru{{ item.from }}">{{ item.from }}</a>
+                    {% else %}
+                        ?
+                    {% endif %}
+                </div>
+                <div class="basis-[4%] text-center">
+                    <i class="las la-long-arrow-alt-right la-lg"></i>
+                </div>
+                <div class="basis-[48%]">
+                    {% if item.to is not empty %}
+                        <a class="underline hover:bg-white hover:text-black" href="http://max13nue.beget.tech{{ item.to }}">{{ item.to }}</a>
+                    {% else %}
+                        ?
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% set partnerItems = [
+    {title: "Дабл Ю", img: "https://placehold.co/30x30"},
+    {title: "Вимос", img: "https://placehold.co/30x30"},
+    {title: "Окамень", img: "https://placehold.co/30x30"},
+    {title: "СПР", img: "https://placehold.co/30x30"},
+    {title: "Хорошая рассада", img: "https://placehold.co/30x30"},
+    {title: "Геопластборд", img: "https://placehold.co/30x30"},
+    {title: "Алексеевская дубрава", img: "https://placehold.co/30x30"},
+    {title: "Камоника", img: "https://placehold.co/30x30"},
+] %}
+
+<ul class="mt-10 sm:mt-20 sm:columns-2">
+    {% for p in partnerItems %}
+        <li class="flex gap-x-3 sm:gap-7 items-center mb-3">
+            <img src="{{ p.img }}" class="rounded-full" width="30" height="30" alt="">
+            <span class="text-2xl opacity-60 font-medium">{{ p.title }}</span>
+        </li>
+    {% endfor %}
+</ul>

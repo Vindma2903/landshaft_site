@@ -1,0 +1,7 @@
+{% set isCentered = isCentered|default(false) %}
+<div class="sm:flex {{ isCentered ? "sm:items-center" : "" }}">
+    <div class="sm:basis-1/4 opacity-40 uppercase text-sm font-helvetica mb-2.5 sm:mb-0 sm:mr-5">{{ title|default("") }}</div>
+    <div class="sm:basis-3/4">
+        {% block text %}{% endblock %}
+    </div>
+</div>

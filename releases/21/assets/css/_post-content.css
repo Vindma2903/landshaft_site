@@ -1,0 +1,24 @@
+/*.post-content {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    row-gap: 2rem;*/
+/*}*/
+
+/*.post-content h2 {*/
+/*    font-size: 1.25rem;*/
+/*    line-height: 1.75rem;*/
+/*}*/
+/*.post-content ul {*/
+/*    list-style: disc;*/
+/*}*/
+/*@media (min-width: 1024px)  {*/
+/*    .post-content {*/
+/*        font-size: 1.5rem;*/
+/*        line-height: 2rem;*/
+/*    }*/
+
+/*    .post-content h2 {*/
+/*        font-size: 2.25rem;*/
+/*        line-height: 2.5rem;*/
+/*    }*/
+/*}*/

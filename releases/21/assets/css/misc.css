@@ -1,0 +1,134 @@
+@import url('./_price-table.css');
+@import url('./_post-content.css');
+html {
+    color-scheme: dark;
+}
+input {
+    outline: none;
+}
+/* Faux outline for older browsers */
+.my-text-outline {
+    color: white; /* Unfortunately you can't use transparent here … */
+    text-shadow:
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white
+}
+
+/* Real outline for modern browsers */
+@supports((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
+    .my-text-outline {
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        text-stroke: 1px white;
+        text-shadow: none;
+    }
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Helvetica', serif;
+}
+
+.my-brand-radial-gradient {
+    background: radial-gradient(circle, rgba(74,122,37,0.5) 0%, rgba(0,0,0,0) 60%);
+}
+.my-scrollbar-width-none {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.my-scrollbar-width-none::-webkit-scrollbar {
+    display: none;
+}
+
+/* Mobile fine-tuning for narrow screens (iPhone SE / 8) */
+@media (max-width: 375px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* Tablet (iPad portrait ~768px) layout tuning */
+@media (min-width: 640px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2.1rem; /* ~34px */
+    }
+
+    h2 {
+        font-size: 1.7rem; /* ~27px */
+    }
+
+    p,
+    li {
+        font-size: 1rem; /* 16px */
+    }
+
+    .container {
+        max-width: 740px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section,
+    .tablet-section-spacing {
+        padding-top: 3.5rem;  /* 56px */
+        padding-bottom: 3.5rem;
+    }
+}
+
+/* Large tablet / small desktop ~1024x1366 (iPad Pro portrait) */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    body {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 2.4rem; /* ~38px */
+    }
+
+    h2 {
+        font-size: 2rem; /* ~32px */
+    }
+
+    p,
+    li {
+        font-size: 1.05rem; /* ~17px */
+    }
+
+    .container {
+        max-width: 960px;
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section,
+    .tablet-section-spacing {
+        padding-top: 4rem;  /* 64px */
+        padding-bottom: 4rem;
+    }
+}
+
+/* Compact landscape (~1024x600): уменьшить высоту и вертикальные отступы */
+@media (max-height: 600px) and (min-width: 768px) {
+    section,
+    .tablet-section-spacing {
+        padding-top: 2.25rem;  /* 36px */
+        padding-bottom: 2.25rem;
+    }
+
+    .lp-hero-desktop {
+        height: 320px;
+    }
+}

@@ -1,0 +1,49 @@
+{% set menuItems = [
+    {title: "О нас", url: "/about"},
+    {title: "Услуги", url: "/services"},
+    {title: "Цены", url: "/prices"},
+    {title: "Портфолио", url: "/portfolio"},
+    {title: "Связаться", url: "/contacts"},
+] %}
+<header class="bg-black z-10 fixed left-0 right-0 top-0">
+    <div class="container">
+        <div class="flex items-center justify-between h-[71px]">
+            <div class="flex items-center">
+                <a href="/">
+                    <img src="/img/header_logo.svg" alt="Мастерская ландшафтов «Вереск»">
+                </a>
+                <div class="tracking-[.17em] text-sm opacity-[.6] pl-3.5 hidden md:block">
+                    мастерская ландшафтов
+                </div>
+            </div>
+            <div class="relative flex items-center gap-6">
+                <div {{ svelte_component('HeaderCollapseButton', {menuItems: menuItems}, true) }}></div>
+
+                <div class="hidden lg:flex gap-x-5 text-base">
+                    {% for item in menuItems %}
+                        <a href="{{ item.url }}" class="hover:underline hover:underline-offset-4 px-2">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+
+                <div class="hidden lg:flex items-center gap-3">
+                    <span class="text-xs uppercase tracking-[0.16em]">
+                        Написать
+                    </span>
+                    <a href="/" target="_blank" class="flex items-center justify-center w-8 h-8 rounded-full bg-[#7D9B73] text-white hover:opacity-90">
+                        <i class="lab la-telegram-plane text-lg"></i>
+                    </a>
+                    <a href="/" target="_blank" class="flex items-center justify-center w-8 h-8 rounded-full bg-[#7D9B73] text-white hover:opacity-90">
+                        <i class="lab la-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#  line after header  #}
+    <div class="flex">
+        <div class="bg-[#7D9B73] h-[7px] w-1/3"></div>
+        <div class="bg-[#DCEBCB] h-[7px] w-1/3"></div>
+        <div class="bg-[#A2B09D] h-[7px] w-1/3"></div>
+    </div>
+</header>

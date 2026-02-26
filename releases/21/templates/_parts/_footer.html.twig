@@ -1,0 +1,51 @@
+<footer class="container mb-12 mt-28">
+    <h6 class="uppercase text-3xl mb-9">Свяжитесь с нами</h6>
+
+    <div class="flex flex-col
+    lg:flex-row-reverse lg:justify-between">
+        <div class="lg:w-3/5 mb-24 lg:mb-0">
+            {# form #}
+            <form class="" action="">
+                <div class="flex flex-col gap-y-2.5 lg:gap-y-5 mb-5">
+                    <input type="text" placeholder="Имя *" class="placeholder-opacity-50 border-b border-white bg-transparent text-xl py-5 lg:py-1.5" required="required"/>
+                    <input type="text" placeholder="Телефон *" class="placeholder-opacity-50 border-b border-white bg-transparent text-xl py-5 lg:py-1.5" required="required"/>
+                    <input type="email" placeholder="E-mail *" class="placeholder-opacity-50 border-b border-white bg-transparent text-xl py-5 lg:py-1.5" required="required"/>
+                </div>
+
+                <button type="submit" class="mt-8 h-[46px] leading-[44px] bg-white text-black text-xl hover:bg-gray-200 active:bg-gray-300 w-full px-8
+               sm:w-auto lg:mt-5">
+                    Отправить
+                </button>
+
+                <div class="text-sm opacity-50 mt-4">Нажимая кнопку “Отправить”, я даю согласие на обработку персональных данных.</div>
+            </form>
+        </div>
+        <div class="lg:w-2/5 lg:pr-24">
+            {# form about #}
+            <div class="text-lg mb-8 hidden lg:block">
+                Чтобы получить дополнительную информацию, заполните эту форму.
+                <br>
+                Мы получим ваше сообщение и обязательно свяжемся с вами!
+            </div>
+
+            {#  social networks  #}
+            <div class="uppercase text-sm mb-4 opacity-50">Социальные сети</div>
+            <div class="flex gap-x-12">
+                <a href="#" class="hover:underline hover:underline-offset-4">Twitter</a>
+                <a href="#" class="hover:underline hover:underline-offset-4">Vkontakte</a>
+                <a href="#" class="hover:underline hover:underline-offset-4">Odnoklassniki</a>
+            </div>
+
+            <div class="uppercase text-sm mb-4 mt-9 opacity-50">Почта</div>
+            <div class="flex gap-x-12">
+                <a href="mailto:info@veresk-vandshaft.ru" class="hover:underline hover:underline-offset-4">info@veresk-vandshaft.ru</a>
+            </div>
+        </div>
+    </div>
+
+    {#  copyright  #}
+    <div class="flex justify-between align-center text-sm mt-[100px]">
+        <div class="opacity-70">©2017-{{ "now"|date("Y") }} VERESK. All rights reserved.</div>
+        <a href="#" class="underline underline-offset-4 opacity-70 hover:opacity-100">Privacy Policy</a>
+    </div>
+</footer>

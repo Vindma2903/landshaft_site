@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block main_before %}
+    {% embed "_parts/headers/image_text_inside.html.twig" with {
+        img: "/img/header_homepage.webp"
+    } %}
+        {% block body %}
+            <div class="h-[480px] lg:h-[750px] flex flex-col justify-center">
+                <h1 class="text-4xl lg:text-7xl mb-5 uppercase">
+                    <span class="font-medium">Ничего лишнего</span>
+                    <br>
+                    <span class="my-text-outline">только гармония</span>
+                </h1>
+                <div class="text-lg max-w-[400px]">
+                    Компания “Вереск” предлагает компекс работ по ландшафтному дизайне, от дизайна до благоустройства.
+                </div>
+            </div>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        {% include 'page/_homepage_parts/services.html.twig' -%}
+    </div>
+
+    <div class="h-28"></div>
+    {% include 'page/_homepage_parts/our_works.html.twig' %}
+    <div class="h-28"></div>
+
+    <div class="container">
+        {% include 'page/_homepage_parts/process.html.twig' %}
+        <div class="h-28"></div>
+        {% include 'page/_homepage_parts/quote.html.twig' %}
+        <div class="h-28"></div>
+        {% include 'page/_homepage_parts/prices.html.twig' %}
+        <div class="h-28"></div>
+        {% include 'page/_homepage_parts/portfolio.html.twig' %}
+    </div>
+{% endblock %}

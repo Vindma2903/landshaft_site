@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>{% block title %}Ландшафтный дизайн в Санкт-Петербурге от компании Вереск{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+
+<body class="bg-black text-white pt-[78px]">
+{% include '_parts/_header.html.twig' %}
+{% block main_before %}{% endblock %}
+<main class="my-28">
+{% block main %}
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}
+</main>
+{% block main_after %}{% endblock %}
+{% include '_parts/_footer.html.twig' %}
+</body>
+</html>

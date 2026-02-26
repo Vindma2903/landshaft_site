@@ -1,0 +1,15 @@
+<h3 class="opacity-40 uppercase mb-3 sm:mb-5 lg:mb-12">Портфолио</h3>
+
+{% set portfolioImages = ["https://placehold.it/450x600", "https://placehold.it/450x600", "https://placehold.it/450x600"] %}
+{% include "_parts/three_images_inline.html.twig" with {images: portfolioImages} %}
+{#<div class="flex gap-1.5 sm:gap-3">#}
+{#    {% for i in 1..3 %}#}
+{#    <div>#}
+{#        <img src="https://placehold.it/450x600" class="max-w-full" alt="">#}
+{#    </div>#}
+{#    {% endfor %}#}
+{#</div>#}
+
+<div class="text-right mt-4 lg:mt-8">
+    <a href="#" class="text-lg lg:text-2xl underline">Больше проектов</a>
+</div>

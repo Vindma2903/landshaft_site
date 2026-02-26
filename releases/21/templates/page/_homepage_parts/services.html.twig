@@ -1,0 +1,21 @@
+{%- set serviceItems = [
+    {title: "Ландшафтное проектирование"},
+    {title: "Озеленение"},
+    {title: "Благоустройство"},
+    {title: "Уход за садом"},
+] -%}
+
+<div class="flex flex-col xl:flex-row xl:justify-between">
+    <h3 class="opacity-40 uppercase mb-9 xl:mb-0 xl:mr-[130px] whitespace-nowrap">Наши услуги</h3>
+    <div class="flex overflow-x-scroll my-scrollbar-width-none gap-x-8 lg:justify-between lg:w-full" data-js-horizontal-scroll-wheel>
+        {% for i in 0..(serviceItems|length - 1) %}
+            {% set serviceItem = serviceItems[i] %}
+            {% set code = i + 1 %}
+            <a class="basis-[200px] sm:basis-[400px] grow-0 shrink-0 block" href="#">
+                <div class="opacity-40 font-helvetica text-xl sm:text-2xl">{{ code > 9 ? code : '0' ~ code }}</div>
+                <img src="https://placehold.it/400x250" class="my-2.5" alt="">
+                <div class="text-xl sm:text-2xl">{{ serviceItem.title }}</div>
+            </a>
+        {% endfor %}
+    </div>
+</div>

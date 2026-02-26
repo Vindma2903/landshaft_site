@@ -1,0 +1,34 @@
+{% set aboutPriceItems = [
+    {title: "Проектирование", img: "https://placehold.co/210x260", isLeft: false},
+    {title: "Озеленение"},
+    {title: "Уход за садом"},
+    {title: "Благоустройство", img: "https://placehold.co/210x260", isLeft: true},
+] %}
+
+
+<div class="border-y">
+    <div class="container">
+        <div class="sm:flex min-w-[320px] sm:min-w-full mx-[-1rem] sm:mx-0">
+            <div class="flex flex-wrap min-w-[320px] relative sm:border-x sm:min-w-full sm:pl-[130px] md:pl-[170px] lg:pl-[250px] xl:pl-[300px]">
+                <div class="hidden sm:block absolute left-0 top-0 bottom-0 bg-cover border-r bg-center w-[130px] md:w-[170px] lg:w-[250px] xl:w-[300px]"
+                     style="background-image: url('https://placehold.co/340x530')"></div>
+                {% for i in 0..(aboutPriceItems|length - 1) -%}
+                    {% set n = i + 1 -%}
+                    {% set item = aboutPriceItems[i] %}
+                    {% set isLeft = item.isLeft|default(false) %}
+                    <div class="basis-1/2 relative odd:border-l">
+                        {% if (item.img is defined) %}
+                            <div class="hidden sm:block absolute top-0 bottom-0 w-[80px] md:w-[100px] lg:w-[140px] xl:w-[170px] bg-cover bg-center {{ isLeft ? "left-0 border-r" : "right-0 border-l" }}"
+                                 style="background-image: url('{{ item.img }}')"></div>
+                        {% endif %}
+                        <div class="h-[120px] md:h-[200px] lg:h-[260px] flex flex-col justify-between p-2.5 border-b {{ (item.img is defined and isLeft) ? "sm:pl-[90px] md:pl-[110px] lg:pl-[150px] xl:pl-[180px]" : "sm:pr-[90px] md:pr-[110px] lg:pr-[150px] xl:pr-[180px]" }}">
+                            <div class="font-helvetica opacity-40 text-xl md:text-xl lg:text-2xl">{{ n > 9 ? n : '0' ~ n }}</div>
+                            <div class="md:text-xl lg:text-2xl">{{ item.title }}</div>
+                        </div>
+                    </div>
+                {% endfor -%}
+            </div>
+        </div>
+
+    </div>
+</div>

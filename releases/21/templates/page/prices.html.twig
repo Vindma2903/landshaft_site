@@ -1,0 +1,411 @@
+{% extends 'base.html.twig' %}
+
+{% set titleDescription %}
+    <div class="gap-5 flex flex-col lg:w-[450px] xl:w-[520px]">
+        <p>Компания «Вереск» оказывает весь комплекс услуг по ландшафтному дизайну в Санкт-Петербурге и Ленинградской области. Именно специализация на комплексе работ гарантирует единую концепцию сада, высокое качество исполнения и оптимальную стоимость.</p>
+        <p>Каждый этап работы курирует один специалист. Это обеспечивает согласованность действий всех работников и строгое соблюдение плана. Таким образом значительно уменьшается количество остатков расходного сырья и материалов. А их разовые закупки по оптовым ценам уменьшают общую стоимость ландшафтного дизайна вашей территории</p>
+    </div>
+{% endset %}
+
+{% block main_before %}
+    <div class="my-28">
+        {% include "_parts/headers/title_with_description.html.twig" with {title: "Цены", description: titleDescription} %}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="lg:ml-[20%]">
+        <h2 class="uppercase text-3xl lg:text-4xl mb-5">Ландшафтное проектирование</h2>
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Подготовительные работы</h3>
+
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Выезд специалиста на участок до 50 км от СПб (фотофиксация, интервьюирование, консультирование, ответы на вопросы)</li>
+                <li>5 000 рублей/2 часа</li>
+                <li>Выезд специалиста на участок до 100 км от СПб (фотофиксация, интервьюирование, консультирование, ответы на вопросы)</li>
+                <li>7 000 рублей/2 часа</li>
+                <li>Выезд специалиста на участок от 100 км от СПб (фотофиксация, интервьюирование, консультирование, ответы на вопросы)</li>
+                <li>договорная цена/2 часа</li>
+                <li>Подготовка калькуляции по благоустройству, озеленению и иным работам на участке</li>
+                <li>10 000 рублей</li>
+                <li>Выезд дизайнера в питомник для закупки и согласования растений</li>
+                <li>5 000 рублей/4 часа</li>
+                <li>Геодезическая съёмка</li>
+                <li>от 15 000 рублей</li>
+                <li>Разбивка территории</li>
+                <li>15 / м2</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Проектирование участка</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Пакет Экспресс (2 эскиза, План благоустройства, Разбивочный план, Ведомость строительных работ и материалов)</li>
+                <li>по запросу</li>
+                <li>Пакет Стандартный (2 эскиза + итоговый, Дендроплан + посадочная ведомость, План дорожно-тропиночной сети + схема покрытий, Схема ливневой канализации и дренажной системы, Ведомость строительных работ и материалов)</li>
+                <li>по запросу</li>
+                <li>Пакет Премиум (2 эскиза + итоговый, Мастерплан, Разбивочный чертеж, Дендрологический план + посадочная ведомость, Визуализация проекта целиком в аксонометрии (без детализации строений), Взрыв-схема, Схема ливневой канализации и дренажной системы, Схема освещения, Схема автополива, Ведомость объемов посадочных работ и материалов)</li>
+                <li>по запросу</li>
+                <li>Пакет Скетчинг-визуализация (Форэскиз в 2х концепциях, 1 видовая точка в визуализации, Ведомость по работам и материалам, Схема объекта - вид сверху (въездная зона, альпинарий, рокарий, пруд))</li>
+                <li>20 000 рублей/ 1 визуализация</li>
+                <li>Проект посадок (Дендрологический план, Посадочная ведомость, Ведомость объемов посадочных работ и материалов)</li>
+                <li>по запросу</li>
+                <li>Визуализация проекта (Визуализация узла генплана (эскиза), кол-во визуализаций определяет дизайнер проекта)</li>
+                <li>по запросу</li>
+            </ul>
+        </div>
+
+        <h2 class="uppercase text-3xl lg:text-4xl mb-5">Благоустройство участка</h2>
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Подготовительные работы</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Выемка грунта вручную</li>
+                <li>от 1000/м3</li>
+                <li>Выемка грунта техникой</li>
+                <li>от 300/м3</li>
+                <li>Обратная засыпка грунта вручную</li>
+                <li>от 700/м3</li>
+                <li>Обратная засыпка грунта техникой</li>
+                <li>от 300/м3</li>
+                <li>Устройство траншей h=0,5м</li>
+                <li>от 200/погонный метр</li>
+                <li>Обратная засыпка траншеи h=0,5м</li>
+                <li>от 175/погонный метр</li>
+                <li>Вывоз грунта с участка</li>
+                <li>от 300/м3</li>
+                <li>Развозка плодородного грунта по участку</li>
+                <li>от 500/м3</li>
+                <li>Укладка геотекстиля</li>
+                <li>от 40/м2</li>
+                <li>Вертикальная планировка</li>
+                <li>от 150/м2</li>
+                <li>Геопластика участка</li>
+                <li>от 650/м2</li>
+                <li>Покос травы</li>
+                <li>от 700/100м2</li>
+                <li>Вырубка деревьев</li>
+                <li>от 500/штука</li>
+                <li>Распил деревьев</li>
+                <li>от 300/штука</li>
+                <li>Корчёвка пней</li>
+                <li>от 1 000/штука</li>
+                <li>Вырубка кустарника и мелколесья</li>
+                <li>от 2 500/100м2</li>
+                <li>Уборка мусора</li>
+                <li>от 50/м2</li>
+                <li>Вывоз мусора(загрузка машины)</li>
+                <li>от 250/м2</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Дренаж</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Открытый дренаж h=0,5м</li>
+                <li>от 400/погонный метр</li>
+                <li>Закрытый дренаж h=0,5м</li>
+                <li>от 590/погонный метр</li>
+                <li>Устройство дренажного колодца из пластика h=2м</li>
+                <li>от 4 000/штука</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Ливнёвая канализация</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Устройство ливнёвой канализации</li>
+                <li>от 500/погонный метр</li>
+                <li>Устройство дождеприёмника</li>
+                <li>от 1 200/шт</li>
+                <li>Устройство водоотводных лотков</li>
+                <li>от 1 100/шт</li>
+                <li>Устройство дождевого колодца</li>
+                <li>от 1 900/шт</li>
+                <li>Устройство пескоуловителя</li>
+                <li>от 1 100/шт</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Мощение</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Пешеходное основание</li>
+                <li>от 300/м2</li>
+                <li>Автомобильное основание</li>
+                <li>от 450/м2</li>
+                <li>Мощение плиткой</li>
+                <li>от 700/м2</li>
+                <li>Мощение природным камнем</li>
+                <li>от 1 380/м2</li>
+                <li>Мощение гранитной брусчаткой</li>
+                <li>от 1 100/м2</li>
+                <li>Мощение клинкером</li>
+                <li>от 1 080/м2</li>
+                <li>Мощение деревянными спилами</li>
+                <li>от 900/м2</li>
+                <li>Набивные дорожки</li>
+                <li>от 350/м2</li>
+                <li>Пошаговые дорожки "В газон"</li>
+                <li>от 600/м2</li>
+                <li>Тротуарный бордюр (500х200х80)</li>
+                <li>от 360/погонный метр</li>
+                <li>Дорожный бордюр (1000х300х150)</li>
+                <li>от 560/погонный метр</li>
+                <li>Установка поребрика вдоль изгибов и радиусов</li>
+                <li>от 440/погонный метр</li>
+                <li>Укрепление крайнего ряда плитки бетоном</li>
+                <li>от 140/погонный метр</li>
+                <li>Установка пластикового бордюра</li>
+                <li>от 80/погонный метр</li>
+                <li>Резка плитки</li>
+                <li>от 110/погонный метр</li>
+                <li>Резка камня</li>
+                <li>от 150/погонный метр</li>
+                <li>Демонтаж старого мощения</li>
+                <li>от 270/погонный метр</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Отмостка вокруг дома</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Бетонная отмостка без облицовки</li>
+                <li>от 1 500/м2</li>
+                <li>Отмостка на щебеночное основание из тротуарной плитки с гидроизоляцией</li>
+                <li>от 1 200/м2</li>
+                <li>Отмостка для свайного фундамента из тротуарной плитки (без гидроизоляции)</li>
+                <li>от 900/м2</li>
+                <li>Утепление отмостки</li>
+                <li>от 350/м2</li>
+                <li>Утепление фундамента</li>
+                <li>от 450/м2</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Подпорные стенки</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Подпорные стенки из габионов</li>
+                <li>от 4 500/м3</li>
+                <li>Подпорные стенки из камня (сухая кладка до 0,5м)</li>
+                <li>от 1 100/метр погонный</li>
+                <li>Подпорные стенки из камня (кладка на раствор до 1м)</li>
+                <li>от 2 900/метр погонный</li>
+                <li>Подпорные стенки из бетона (высота до 1 м, толщина до 0,25м.)</li>
+                <li>от 3 300/метр погонный</li>
+                <li>Деревянные подпорные стенки</li>
+                <li>от 1 090/метр погонный</li>
+                <li>Облицовка вертикальных поверхностей натуральным пиленным камнем</li>
+                <li>от 1 460/м2</li>
+                <li>Облицовка вертикальных поверхностей натуральным непиленным камнем</li>
+                <li>от 1 660/м2</li>
+                <li>Облицовка вертикальных поверхностей искусствнным камнем</li>
+                <li>от 1 360/м2</li>
+                <li>Облицовка вертикальных поверхностей гранитом</li>
+                <li>от 3 100/м2</li>
+                <li>Устройство щебёночной подушки с трамбовкой</li>
+                <li>от 350/погонный метр</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Водоёмы</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Устройство плёночного водоёма(без облицовки) до 1м. в глубину</li>
+                <li>от 3 100/м2</li>
+                <li>Облицовка пленочного водоема камнем (на раствор)</li>
+                <li>от 950/м2</li>
+                <li>Устройство каскада</li>
+                <li>от 3 100/м2</li>
+                <li>Устройство ручья</li>
+                <li>от 4 100/м2</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Ландшафтное освещение</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Прокладка кабеля в гофре(без земляных работ)</li>
+                <li>от 90/метр погонный</li>
+                <li>Бетонное основание под светильник</li>
+                <li>от 650/шт</li>
+                <li>Установка светильника с подключением</li>
+                <li>от 1 400/шт</li>
+                <li>Подключение к щитку</li>
+                <li>от 3 000/линия</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Бетонные работы</h3>
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Устройство опалубки, вязка арматурного каркаса, бетонирование</li>
+                <li>от 6 000/м3</li>
+                <li>Устройство бетонных лестниц</li>
+                <li>от 1 200/ступень</li>
+            </ul>
+        </div>
+
+        <div class="flex flex-col gap-5 mb-24">
+            <ul class="font-helvetica opacity-60 flex flex-wrap justify-between gap-5 items-center">
+                <li class="sm:text-lg lg:text-2xl">Заборы и ворота</li>
+                <li class="text-sm sm:text-base">Расчитывается по проекту</li>
+            </ul>
+
+            <ul class="font-helvetica opacity-60 flex flex-wrap justify-between gap-5 items-center">
+                <li class="sm:text-lg lg:text-2xl">Беседки</li>
+                <li class="text-sm sm:text-base">Расчитывается по проекту</li>
+            </ul>
+
+            <ul class="font-helvetica opacity-60 flex flex-wrap justify-between gap-5 items-center">
+                <li class="sm:text-lg lg:text-2xl">Заборы и ворота</li>
+                <li class="text-sm sm:text-base">Детские площадки</li>
+            </ul>
+        </div>
+
+        <h2 class="uppercase text-3xl lg:text-4xl mb-5">Озеленение участка</h2>
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Устройство газона</h3>
+
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Укладка рулонного газона</li>
+                <li>от 135/м2</li>
+                <li>Устройство посевного газона</li>
+                <li>от 65/м2</li>
+                <li>Устройство рулонного газона на склонах</li>
+                <li>от 400/м2</li>
+                <li>Устройство основания под газон (Укатка грунта, внесение минеральных удобрений, прикатка и полив газона)</li>
+                <li>от 120/м2</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Посадка деревьев</h3>
+
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Посадка хвойных (до 1м)</li>
+                <li>от 900/шт</li>
+                <li>Посадка хвойных (от 1 до 2 м)</li>
+                <li>от 1 900/шт</li>
+                <li>Посадка хвойных (от 2 м)</li>
+                <li>25% от стоимости</li>
+                <li>Посадка лиственных (до 1 м)</li>
+                <li>от 500/шт</li>
+                <li>Посадка лиственных (от 1 до 2 м)</li>
+                <li>от 1 200/шт</li>
+                <li>Посадка лиственных (от 2 м)</li>
+                <li>25% от стоимости</li>
+                <li>Деревья дороже 10 000 руб.</li>
+                <li>25% от стоимости</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Посадка кустарников</h3>
+
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Посадка лиственного кустарника (до 0,5 м)</li>
+                <li>от 400/шт</li>
+                <li>Посадка лиственного кустарника (до 1 м)</li>
+                <li>от 500/шт</li>
+                <li>Посадка лиственного кустарника (от 1 м)</li>
+                <li>от 800/шт</li>
+                <li>Посадка хвойного кустарника (до 1 м)</li>
+                <li>от 900/шт</li>
+                <li>Посадка хвойного кустарника (от 1 м)</li>
+                <li>от 1 200/шт</li>
+                <li>Рододендроны</li>
+                <li>25% от стоимости</li>
+                <li>Розы до 1 м</li>
+                <li>от 500/шт</li>
+                <li>Кустарник стоимостью от 5 т.р.</li>
+                <li>25% от стоимости</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Живые изгороди</h3>
+
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Живые изгороди из хвойных</li>
+                <li>от 900/погонный метр</li>
+                <li>Живые изгороди из лиственных</li>
+                <li>от 6500/погонный метр</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Создание цветников</h3>
+
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Устройство однолетних цветников</li>
+                <li>от 600/м2</li>
+                <li>Устройство многолетних цветников</li>
+                <li>от 750/м2</li>
+                <li>Устройство розария</li>
+                <li>от 1 450/м2</li>
+                <li>Создание альпинария</li>
+                <li>от 2 600/м2</li>
+                <li>Создание рокариев</li>
+                <li>от 1 890/м2</li>
+                <li>Создание сухих ручьев</li>
+                <li>от 1 890/м2</li>
+                <li>Мульчирование(1 пакет мульчи ~50л)</li>
+                <li>от 40/шт</li>
+                <li>Отсыпка сыпучими материалами (крошка, галька и т. п.)</li>
+                <li>от 100/м2</li>
+                <li>Установка пластиковых ограничителей</li>
+                <li>от 80/погонный метр</li>
+            </ul>
+        </div>
+
+        <h2 class="uppercase text-3xl lg:text-4xl mb-5">Уход за садом</h2>
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Стрижка газона</h3>
+
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>До 15 см</li>
+                <li>от 8/м2</li>
+                <li>Более 30 см</li>
+                <li>от 10/м2</li>
+                <li>Вывоз и утилизация травы</li>
+                <li>от 2 000</li>
+            </ul>
+        </div>
+
+        <h3 class="opacity-60 sm:text-lg lg:text-2xl mb-12">Стрижка живой изгороди</h3>
+
+        <div class="price-list font-helvetica mb-24">
+            <div class="price-list__bg" style="background-image: url('https://placehold.co/900x500')"></div>
+            <ul class="price-list__ul">
+                <li>Высота до 1,5 м</li>
+                <li>от 250/погонный метр</li>
+                <li>Высота от 1,5 м до 3 м</li>
+                <li>от 420/погонный метр</li>
+            </ul>
+        </div>
+
+        <div class="font-helvetica text-sm lg:text-base flex flex-col gap-5 opacity-60">
+            <p>*Данная страница не является публичной офертой.</p>
+            <p>В таблице указана базовая стоимость. Однако цены могут отличаться, в зависимости от особенностей участка. При отклонении от базовой цены мы указываем причину.</p>
+            <p>Свяжитесь с нами. Мы ответим на вопросы по расчету сметы.</p>
+        </div>
+    </div>
+{% endblock %}

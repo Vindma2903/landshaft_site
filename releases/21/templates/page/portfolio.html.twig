@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% set titleDescription %}
+    <p class="text-xl sm:text-2xl lg:w-[450px] xl:w-[520px]">
+        Как и в любой мастерской мы вкладываем душу в свои работы, поэтому каждый сад создается индивидуально для каждого заказчика. Любой объект для нас это маленькая история, новые эмоции и новый опыт. Каждый кто обращается к нам получает именно свой уникальный сад.
+    </p>
+{% endset %}
+{% block main_before %}
+    <div class="my-28">
+        {% include "_parts/headers/title_with_description.html.twig" with {title: "Портфолио", description: titleDescription} %}
+    </div>
+{% endblock %}
+
+{% block content %}
+    {% include "page/_portfolio_parts/one_image.html.twig" with {
+        img: "https://placehold.co/540x400",
+        title: "Лунное озеро",
+        description: "Июнь'21",
+    } %}
+
+    <div class="h-28"></div>
+
+    {% include "page/_portfolio_parts/two_heiden_images.html.twig" with {
+        imgBig: "https://placehold.co/270x400",
+        imgSmall: "https://placehold.co/300x200",
+        title: "Визуализации",
+        description: "Март'22",
+        isDown: true,
+    } %}
+
+    <div class="h-28"></div>
+
+    {% include "page/_portfolio_parts/one_image.html.twig" with {
+        img: "https://placehold.co/270x400",
+        title: "Бельведер",
+        description: "Август'21",
+    } %}
+
+    <div class="h-28"></div>
+
+    {% include "page/_portfolio_parts/two_weiden_images.html.twig" with {
+        imgBig: "https://placehold.co/540x400",
+        imgSmall: "https://placehold.co/300x200",
+        title: "Суходолье",
+        description: "Октябрь'21",
+    } %}
+
+    <div class="h-28"></div>
+
+    {% include "page/_portfolio_parts/two_heiden_images.html.twig" with {
+        imgBig: "https://placehold.co/270x400",
+        imgSmall: "https://placehold.co/300x200",
+        title: "Водный мир",
+        description: "Июль'21",
+    } %}
+
+    <div class="h-28"></div>
+
+
+{% endblock %}

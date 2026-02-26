@@ -1,0 +1,11 @@
+{% set isRight = isRight|default(false) %}
+
+<div class="max-w-[940px] mx-auto {{ isRight ? "text-right" : "text-left" }}">
+    <div class="max-w-[470px] lg:max-w-full {{ isRight ? "ml-auto" : "mr-auto lg:flex-row-reverse lg:justify-start" }} lg:flex lg:items-center lg:justify-end">
+        <div>
+            <div class="text-3xl sm:text-6xl uppercase">{{ name|raw }}</div>
+            <div class="text-sm sm:text-base mb-2.5 sm:mb-3 opacity-60">{{ about|raw }}</div>
+        </div>
+        <img src="{{ img }}" class="{{ isRight ? "ml-auto lg:ml-8" : "mr-auto lg:mr-8" }} max-w-[350px] lg:max-w-full" alt="">
+    </div>
+</div>

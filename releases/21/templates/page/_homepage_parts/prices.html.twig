@@ -1,0 +1,21 @@
+{% set priceItems = [
+    {title: "Базовый", desciption: "От 55 тысяч", code: "01"},
+    {title: "Основной", desciption: "От 100 тысяч", code: "02"},
+    {title: "Уникальный", desciption: "От 230 тысяч", code: "03"},
+    {title: "Связаться с нами", desciption: "Наш менеджер свяжется с Вами и рассчитает смету", code: ""},
+] %}
+
+<div class="flex flex-col xl:flex-row xl:justify-between">
+    <h3 class="opacity-40 uppercase mb-9 xl:mb-0 xl:mr-[130px] whitespace-nowrap">Пакеты услуг</h3>
+    <div class="flex overflow-x-scroll my-scrollbar-width-none gap-x-10 lg:justify-between lg:overflow-x-visible lg:w-full">
+        {% for priceitem in priceItems %}
+            <div class="basis-[200px] grow-0 shrink-0 border-b border-gray-500 pb-12">
+                <div class="text-2xl mb-2.5">{{ priceitem.title }}</div>
+                <div class="opacity-60 text-sm">{{ priceitem.desciption }}</div>
+                {% if priceitem.code is not empty %}
+                    <div class="opacity-40 font-helvetica mt-2.5">{{ priceitem.code }}</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>

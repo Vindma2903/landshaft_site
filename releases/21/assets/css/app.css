@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Articulat CF */
+    @font-face {
+        font-family: Articulat CF;
+        font-weight: 400;
+        src: url('../fonts/ArticulatCF-Normal.woff2') format("woff2");
+    }
+    @font-face {
+        font-family: Articulat CF;
+        font-weight: 500;
+        src: url('../fonts/ArticulatCF-Medium.woff2') format("woff2");
+    }
+
+    /* Helvetica */
+    @font-face {
+        font-family: Helvetica;
+        font-weight: 400;
+        src: url('../fonts/HelveticaRegular.woff') format("woff");
+    }
+    @font-face {
+        font-family: Helvetica;
+        font-weight: 500;
+        src: url('../fonts/HelveticaMedium.woff') format("woff");
+    }
+}
