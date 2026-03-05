@@ -3,46 +3,23 @@
     overlay_color: "rgba(200, 223, 192, 0.3)"
 } %}
     {% block body %}
-        {# Мобильная версия: картинка сверху, текстовый блок ниже #}
-        <div class="sm:hidden" style="font-family: 'Articulat CF', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; color: #111111;">
-            <img src="/img/main_bg.jpg"
-                 alt="Ландшафтное проектирование"
-                 class="w-full h-auto max-h-[220px] object-cover">
-
-            <div class="bg-white/95 px-4 py-4">
-                <h1 class="text-2xl leading-tight font-normal mb-3">
+        {# Единый hero для всех экранов: текст поверх изображения #}
+        <div class="flex h-[360px] sm:h-[360px] md:h-[480px] lg:h-[750px] xl:h-[850px] 2xl:h-[950px] items-center lp-hero-desktop">
+            <div class="max-w-4xl px-4 sm:px-8 sm:py-6 md:px-10 md:py-7" style="font-family: 'Articulat CF', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; color: #111111;">
+                <h1 class="text-2xl sm:text-3xl md:text-[28px] lg:text-[40px] 2xl:text-[48px] leading-tight font-normal mb-4 sm:mb-5 2xl:mb-6">
                     Ландшафтное проектирование в СПБ
                 </h1>
-                <p class="text-sm leading-relaxed mb-4">
-                    Ландшафтное проектирование — это не роскошь, а разумное вложение, которое позволяеь создать красивый, функциональный и, что самое главное,
+                <p class="text-sm sm:text-base 2xl:text-lg leading-relaxed mb-4 sm:mb-5 2xl:mb-6 max-w-3xl">
+                    Ландшафтное проектирование — это не роскошь, а разумное вложение,
+                    которое позволяет создать красивый, функциональный и, что самое главное,
                     жизнеспособный сад в сложных северных условиях.
                 </p>
 
-                <button class="w-full inline-flex items-center justify-center px-6 py-2.5 bg-[#7D9B73] text-white text-sm font-bold">
-                    Рассчитать стоимость
-                </button>
-                <div class="mt-2 text-[11px] text-[#111111]">
-                    Бесплатная консультация и расчёт стоимости проекта
-                </div>
-            </div>
-        </div>
-
-        {# Десктоп / планшет: текст поверх фонового изображения, как раньше #}
-        <div class="hidden sm:flex h-[360px] md:h-[480px] lg:h-[632px] 2xl:h-[680px] items-center lp-hero-desktop">
-            <div class="max-w-4xl px-8 sm:py-6 md:px-10 md:py-7" style="font-family: 'Articulat CF', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; color: #111111;">
-                <h1 class="text-3xl md:text-[28px] lg:text-[40px] 2xl:text-[48px] leading-tight font-normal mb-5 2xl:mb-6">
-                    Ландшафтное проектирование в СПБ
-                </h1>
-                <p class="text-base 2xl:text-lg leading-relaxed mb-5 2xl:mb-6 max-w-3xl">
-                    Ландшафтное проектирование — это не роскошь, а разумное вложение,<br> которое позволяет создать красивый,
-                    функциональный и, что самое<br> главное, жизнеспособный сад в сложных северных условиях.
-                </p>
-
                 <div class="inline-flex flex-col gap-2 w-full sm:w-auto">
-                    <button class="inline-flex items-center justify-center px-8 py-2.5 bg-[#7D9B73] text-white text-base font-bold">
+                    <button class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-2.5 bg-[#7D9B73] text-white text-sm sm:text-base font-bold">
                         Рассчитать стоимость
                     </button>
-                    <div class="text-xs text-[#111111]">
+                    <div class="text-[11px] sm:text-xs text-[#111111]">
                         Бесплатная консультация и расчёт стоимости проекта
                     </div>
                 </div>
