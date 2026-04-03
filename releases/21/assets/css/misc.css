@@ -141,6 +141,11 @@ h1,h2,h3,h4,h5,h6 {
     display: block;
 }
 
+/* Normalize bullet vertical alignment in package cards */
+.lp-packages-bullets li > img[src="/img/Ellipse 1.svg"] {
+    margin-top: 0.45em;
+}
+
 /* Desktop keeps fixed size like in макет */
 @media (min-width: 1024px) {
     .lp-packages-3d {
