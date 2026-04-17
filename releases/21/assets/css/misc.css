@@ -2,6 +2,7 @@
 @import url('./_post-content.css');
 html {
     color-scheme: dark;
+    overflow-x: hidden;
 }
 input {
     outline: none;
